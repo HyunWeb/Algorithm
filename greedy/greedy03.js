@@ -1,25 +1,18 @@
-/*
-1이 될때 까지
-O(n) <= O(100,000)
-*/
-
 const fs = require('fs');
-let input = fs.readFileSync("./tc.txt").toString().trim();
+let input = fs.readFileSync("../tc.txt").toString().trim().split('\n');
 
-let[n, k] = input.split(' ').map(v => +v);
 
-function solution(n, k) {
+let [nm, ...arr] = input;
+let [n, m] = nm.split(' ').map(v => +v);
+arr = arr.map(v => v.split(' ').map(v => +v));
+
+function solution(n, m, arr) {
     let result = 0;
 
-    while(n > 1) {
-        if(n % k === 0){
-            n /= k;
-        } else {
-            n--;
-        }
-        result++;
+    for(const cur of arr) {
+        result = Math.max(result, Math.min(...cur));
     }
-
     return result;
 }
-console.log(solution(n, k));
+
+console.log(solution(n, m, arr));
