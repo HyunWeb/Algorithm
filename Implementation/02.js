@@ -1,3 +1,5 @@
+// 시각
+
 const fs = require('fs');
 let input = fs.readFileSync("../tc.txt").toString().trim();
 

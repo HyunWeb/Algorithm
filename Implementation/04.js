@@ -1,3 +1,5 @@
+// 게임 개발
+
 const fs = require('fs');
 let input = fs.readFileSync("../tc.txt").toString().trim().split('\n');
 

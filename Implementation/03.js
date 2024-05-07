@@ -1,3 +1,5 @@
+// 왕실의 나이트
+
 const fs = require('fs');
 let input = fs.readFileSync("../tc.txt").toString().trim();
 
