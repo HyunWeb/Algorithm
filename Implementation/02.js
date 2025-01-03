@@ -1,5 +1,5 @@
 // 시각
-
+// 5
 const fs = require('fs');
 let input = fs.readFileSync("../tc.txt").toString().trim();
 
@@ -7,7 +7,8 @@ let n = Number(input);
 
 function solution(n){
     let count = 0;
-
+    
+    //5시 59분 59초까지 가정
     for(let h = 0; h <= n; h++){
         for(let m = 0; m <= 59; m++){
             for(let s = 0; s <= 59; s++){
@@ -23,3 +24,4 @@ function solution(n){
 }
 
 console.log(solution(n));
+//11475

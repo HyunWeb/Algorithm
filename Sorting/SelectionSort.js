@@ -6,14 +6,13 @@ O(N^2)의 시간 복잡도를 가진다.
 
 let array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8];
 
-for (let i = 0; i < array.length; i++) {
-    let minIdx = i;
-    for (let j = i + 1; j < array.length; j++) {
+for (let i = 0; i < array.length; i++){
+    let minIdx = i; 
+    for(let j = i + 1; j < array.length; j++) {
         if (array[minIdx] > array[j]) {
             minIdx = j;
         }
     }
-    // 자바스크립트 스와이프
     [array[i], array[minIdx]] = [array[minIdx], array[i]];
 }
 

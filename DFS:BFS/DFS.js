@@ -1,10 +1,10 @@
-const dfs = (graph, v, visited) => {
-    // 1. 탐색 시작 노드 방문 처리
+const dfs = (graph, v, visited) => {
+    // 1. 탐색 시작 노드 방문 처리 
     visited[v] = true;
     console.log(v);
 
-    //2. 탐색 노드의 인접 노드 확인
-    for(const cur of graph[v]){
+    // 2. 탐색 노드의 인접 노드 확인
+    for(const cur of graph[v]) {
         if(!visited[cur]){
             dfs(graph, cur, visited);
         }
