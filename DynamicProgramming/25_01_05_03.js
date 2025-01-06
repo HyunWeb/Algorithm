@@ -37,6 +37,7 @@ class MinHeap {
       index = parentIndex;
     }
   }
+
   bubbleDown() {
     let index = 0;
     while (index * 2 + 1 < this.size()) {
